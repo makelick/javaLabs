@@ -1,7 +1,9 @@
-public class Person {
-    private String lastName;
-    private String firstName;
-    private int age;
+import java.util.Objects;
+
+public final class Person {
+    private final String lastName;
+    private final String firstName;
+    private final int age;
 
     public Person(String lastName, String firstName, int age) {
         this.lastName = lastName;
@@ -10,12 +12,16 @@ public class Person {
     }
 
     @Override
+    public int hashCode() {
+        return Objects.hash(lastName, firstName, age);
+    }
+
+    @Override
     public boolean equals(Object o) {
-        if (o == null || this.getClass() != o.getClass()) return false;
-        Person person = (Person) o;
-        return lastName.equals(person.lastName) &&
-                firstName.equals(person.firstName) &&
-                age == person.age;
+        return o instanceof Person person &&
+                Objects.equals(this.lastName, person.lastName) &&
+                Objects.equals(this.firstName, person.firstName) &&
+                Objects.equals(this.age, person.age);
     }
 }
 
