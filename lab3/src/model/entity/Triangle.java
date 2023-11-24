@@ -1,6 +1,6 @@
-package model;
+package model.entity;
 
-class Triangle extends Shape {
+public class Triangle extends Shape {
     private double base;
     private double height;
 

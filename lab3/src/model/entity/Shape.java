@@ -1,7 +1,11 @@
-package model;
+package model.entity;
 
-abstract class Shape implements Drawable {
+public abstract class Shape implements Drawable {
     protected String shapeColor;
+
+    public String getShapeColor() {
+        return shapeColor;
+    }
 
     public Shape(String shapeColor) {
         this.shapeColor = shapeColor;

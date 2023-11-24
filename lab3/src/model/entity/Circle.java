@@ -1,6 +1,6 @@
-package model;
+package model.entity;
 
-class Circle extends Shape {
+public class Circle extends Shape {
     private double radius;
 
     public Circle(String shapeColor, double radius) {

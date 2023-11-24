@@ -1,4 +1,4 @@
-package model;
+package model.entity;
 
 interface Drawable {
     void draw();
