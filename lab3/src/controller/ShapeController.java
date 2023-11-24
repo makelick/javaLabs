@@ -30,15 +30,15 @@ public class ShapeController {
                 .sum();
     }
 
-    public Shape[] sortDataSetByArea() {
+    public Shape[] getSortedDataSetByArea() {
         Shape[] sortedList = dataSet.clone();
-        Arrays.sort(dataSet, Comparator.comparingDouble(Shape::calcArea));
+        Arrays.sort(sortedList, Comparator.comparingDouble(Shape::calcArea));
         return sortedList;
     }
 
-    public Shape[] sortDataSetByColor() {
+    public Shape[] getSortedDataSetByColor() {
         Shape[] sortedList = dataSet.clone();
-        Arrays.sort(dataSet, Comparator.comparing(Shape::getShapeColor));
+        Arrays.sort(sortedList, Comparator.comparing(Shape::getShapeColor));
         return sortedList;
     }
 }
