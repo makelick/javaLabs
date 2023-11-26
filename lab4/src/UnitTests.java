@@ -76,4 +76,31 @@ public class UnitTests {
             fail("Exception should not be thrown: " + e.getMessage());
         }
     }
+
+    @Test
+    public void testCountOfHumansOnRoad() {
+        Road road = new Road();
+
+        Taxi<Passenger> taxi = new Taxi<>(4);
+        FireTruck fireTruck = new FireTruck(2);
+        PoliceCar policeCar = new PoliceCar(3);
+
+        try {
+            taxi.boardPassenger(new Passenger("John"));
+            taxi.boardPassenger(new Passenger("Alice"));
+
+            fireTruck.boardPassenger(new Firefighter("Bob"));
+
+            policeCar.boardPassenger(new Policeman("Charlie"));
+
+            road.addCarToRoad(taxi);
+            road.addCarToRoad(fireTruck);
+            road.addCarToRoad(policeCar);
+
+            int count = road.getCountOfHumans();
+            assertEquals(4, count);
+        } catch (Exception e) {
+            fail("Exception should not be thrown: " + e.getMessage());
+        }
+    }
 }
