@@ -1,4 +1,4 @@
-class PoliceCar extends Vehicle<Policeman> {
+public class PoliceCar extends Vehicle<Policeman> {
     PoliceCar(int maxSeats) {
         super(maxSeats);
     }

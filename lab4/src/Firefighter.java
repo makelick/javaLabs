@@ -1,4 +1,4 @@
-class Firefighter extends Passenger {
+public class Firefighter extends Passenger {
     Firefighter(String name) {
         super(name);
     }

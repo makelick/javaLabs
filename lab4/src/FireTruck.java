@@ -1,4 +1,4 @@
-class FireTruck extends Vehicle<Firefighter> {
+public class FireTruck extends Vehicle<Firefighter> {
     FireTruck(int maxSeats) {
         super(maxSeats);
     }

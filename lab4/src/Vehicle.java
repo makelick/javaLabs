@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-abstract class Vehicle<T extends Passenger> {
+public abstract class Vehicle<T extends Passenger> {
 
     private final int maxSeats;
     private int occupiedSeats;
